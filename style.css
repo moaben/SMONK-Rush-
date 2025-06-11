@@ -1,0 +1,126 @@
+/* Base64 background image for simplicity */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  direction: ltr;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+button {
+  background-color: #ff9900;
+  border: none;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #cc7a00;
+}
+
+#game-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#monkey-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+#score {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#level-select {
+  font-size: 1em;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+}
+
+#question-container {
+  text-align: center;
+}
+
+#timer {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#question {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+#answers button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  font-size: 1.1em;
+  background-color: #222;
+  border: 2px solid #ff9900;
+  border-radius: 12px;
+  color: #ff9900;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#answers button:hover {
+  background-color: #ff9900;
+  color: #222;
+}
+
+#answers button.correct {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: white;
+}
+
+#answers button.wrong {
+  background-color: #f44336;
+  border-color: #f44336;
+  color: white;
+}
+
+#result {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-top: 20px;
+}
