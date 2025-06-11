@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crypto Quiz Game | لعبة أسئلة كريبتو</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="https://i.imgur.com/OdL0XPt.png" alt="SMONK Monkey" id="monkey-img" />
+      <div id="language-select">
+        <button data-lang="en" class="lang-btn active">English</button>
+        <button data-lang="ar" class="lang-btn">العربية</button>
+      </div>
+    </header>
+
+    <div id="game-container">
+      <div id="level-select" class="hide">
+        <h2 data-i18n="choose_level">Choose Level | اختر المستوى</h2>
+        <button class="level-btn" data-level="easy" data-i18n="easy">Easy | سهل</button>
+        <button class="level-btn" data-level="medium" data-i18n="medium">Medium | متوسط</button>
+        <button class="level-btn" data-level="hard" data-i18n="hard">Hard | صعب</button>
+      </div>
+
+      <div id="quiz" class="hide">
+        <div id="question-container">
+          <div id="question">Question text</div>
+          <div id="answers"></div>
+        </div>
+        <div id="timer">5</div>
+        <div id="score">Score: 0</div>
+      </div>
+
+      <div id="result" class="hide">
+        <h2 data-i18n="results">Results | النتائج</h2>
+        <p id="final-score"></p>
+        <button id="restart-btn" data-i18n="restart">Restart | إعادة</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="correct-sound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+  <audio id="wrong-sound" src="https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
